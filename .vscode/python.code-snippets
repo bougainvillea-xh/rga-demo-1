@@ -1,0 +1,15 @@
+{
+  "module docstring (PyCharm-like)": {
+    "scope": "python",
+    "prefix": "aaa",
+    "body": [
+      "r\"\"\"$TM_FILENAME_BASE",
+      "@Time: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE",
+      "@File: $RELATIVE_FILEPATH",
+      "\"\"\"",
+      "",
+      "$0",
+    ],
+    "description": "文件头 docstring（内置变量 + 作者/说明占位）",
+  },
+}

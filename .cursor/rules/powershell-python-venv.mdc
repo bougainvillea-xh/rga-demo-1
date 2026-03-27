@@ -1,0 +1,29 @@
+---
+description: PowerShell 下多命令串联与 Python 虚拟环境激活
+alwaysApply: true
+---
+
+# Shell 与 Python 运行约定
+
+## PowerShell
+
+- 本仓库在 **PowerShell** 下使用；串联多条命令时用 **`;`**，不要用 **`&&`**（`&&` 在旧版 PowerShell 中行为与 bash 不一致）。
+- 示例：
+
+```powershell
+cd E:\path\to\project; uv run python main.py
+```
+
+## Python
+
+- 运行 **python / pip / uv** 等与项目解释器相关的命令前，先激活虚拟环境：
+
+```powershell
+.\.venv\Scripts\activate
+```
+
+- 激活后再执行，例如：
+
+```powershell
+.\.venv\Scripts\activate; python main.py
+```

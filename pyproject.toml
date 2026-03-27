@@ -1,0 +1,43 @@
+[project]
+name = "rga-demo-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "ruff>=0.15.8",
+]
+
+# --- Ruff 配置 (代码格式化与质量检查) ---
+[tool.ruff]
+# 每一行代码的最大长度
+line-length = 88
+# 目标 Python 版本
+target-version = "py313" 
+
+[tool.ruff.lint]
+# E/F: 基础错误, I: 自动排序导包, N: 命名规范, UP: 提示新版 Python 语法
+select = ["E", "F", "I", "N", "UP"]
+ignore = []
+
+# --- Mypy 配置 (静态类型检查) ---
+[tool.mypy]
+# 这里的版本号必须是具体的 x.y 格式
+python_version = "3.13" 
+# 开启严格模式：强制要求所有函数必须有类型注解
+strict = true
+# 忽略缺失类型注解的第三方库
+ignore_missing_imports = true
+# 允许在 Pydantic 模型中使用插件
+# plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = ["-q"]
