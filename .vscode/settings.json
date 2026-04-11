@@ -6,6 +6,13 @@
     "pytest",
     "testpaths",
     "pythonpath",
-    "addopts"
+    "addopts",
+    "tongyi",
+    "qwen",
+    "langchain",
+    "pyyaml",
+    "vectorstores",
+    "pypdf",
+    "dashscope"
   ]
 }

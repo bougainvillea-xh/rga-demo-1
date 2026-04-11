@@ -6,8 +6,11 @@ r"""config_handler
 from typing import Any, cast
 
 import yaml
+from dotenv import load_dotenv
 
 from utils.path_tool import get_abs_path
+
+load_dotenv(get_abs_path(".env"))
 
 
 def _load_config(config_file: str, encoding: str = "utf-8") -> dict[str, Any]:

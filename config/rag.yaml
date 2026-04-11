@@ -1,2 +1,2 @@
-rag: rag_config
-model: "gpt-4o-mini"
+chat_model_name: "qwen3.6-plus"
+embeddings_model_name: "text-embedding-v4"
