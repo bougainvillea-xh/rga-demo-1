@@ -2,15 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: rag.vector_store",
-      "type": "debugpy",
-      "request": "launch",
-      "module": "rag.vector_store",
-      "cwd": "${workspaceFolder}",
-      "justMyCode": true
-    },
-    {
-      "name": "Python: Current File (含项目根路径)",
+      "name": "Python: Current File",
       "type": "debugpy",
       "request": "launch",
       "program": "${file}",
