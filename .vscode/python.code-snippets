@@ -6,6 +6,7 @@
       "r\"\"\"$TM_FILENAME_BASE",
       "@Time: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE",
       "@File: $RELATIVE_FILEPATH",
+      "@Description: $TM_FILENAME_BASE",
       "\"\"\"",
       "",
       "$0",
