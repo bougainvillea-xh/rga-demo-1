@@ -23,12 +23,14 @@ def get_project_root() -> str:
 
 def get_abs_path(relative_path: str) -> str:
     """
-    传递相对路径，获取绝对路径
-    :param relative_path: 相对路径
-    :return: 绝对路径
+    传递相对路径，获取绝对路径；自动归一化分隔符，兼容 Windows / Linux
+    :param relative_path: 相对路径（可使用 `/` 或 `\\`）
+    :return: 当前平台风格的绝对路径
     """
     project_root = get_project_root()
-    return os.path.join(project_root, relative_path)
+    return os.path.normpath(
+        os.path.join(project_root, relative_path.replace("\\", "/"))
+    )
 
 
 if __name__ == "__main__":
